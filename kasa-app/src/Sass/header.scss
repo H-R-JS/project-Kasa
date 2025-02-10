@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 45px 100px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin-right: 20px;
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 24px;
+  font-family: "Montserrat", serif;
+  cursor: pointer;
+}
+
+.link.underligne {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

@@ -6,17 +6,19 @@ import { useEffect } from "react";
 export const Header = () => {
   const [classActive, setClassActive] = useState({ home: "", about: "" });
 
+  const url = window.location.href;
+
   function handleUnderligne() {
-    if (window.location.href.includes("home")) {
-      setClassActive({ home: "underligne", about: "none" });
-    } else if (window.location.href.includes("about")) {
-      console.log("ggg");
-      setClassActive({ home: "none", about: "underligne" });
+    if (url.includes("home")) {
+      return setClassActive({ home: "underligne", about: "none" });
+    } else if (url.includes("about")) {
+      return setClassActive({ home: "none", about: "underligne" });
     }
   }
+
   useEffect(() => {
     handleUnderligne();
-  });
+  }, []);
 
   return (
     <header>

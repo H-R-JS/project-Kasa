@@ -1,0 +1,23 @@
+.collapse {
+  width: 1023px;
+}
+
+.coll-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding: 0 15px;
+  background-color: #ff6060;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.coll-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.coll-text-container.none {
+  display: none;
+}

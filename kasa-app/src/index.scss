@@ -1,4 +1,23 @@
-@import "./Sass/header.scss";
+@import "./Sass/assets/header.scss";
+@import "./Sass/assets/banner.scss";
+@import "./Sass/assets/cards.scss";
+@import "./Sass/assets/footer.scss";
+@import "./Sass/assets/collapse.scss";
+@import "./Sass/page/homePage.scss";
+@import "./Sass/page/aboutPage.scss";
+
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

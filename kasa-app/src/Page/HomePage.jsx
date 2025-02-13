@@ -19,9 +19,12 @@ export const HomePage = () => {
       <div className="cards-container">
         {arrayData.map((item, index) => {
           return (
-            <>
-              <Card key={index} title={item.title} cover={item.cover} />
-            </>
+            <Card
+              key={index}
+              title={item.title}
+              cover={item.cover}
+              object={item}
+            />
           );
         })}
       </div>

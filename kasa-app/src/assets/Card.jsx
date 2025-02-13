@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const Card = ({ title, cover }) => {
+export const Card = ({ title, cover, object }) => {
+  console.log(object);
+
+  const navigate = useNavigate();
   return (
-    <Link to="" className="link-card">
+    <div
+      onClick={() => navigate(`/house/${object.id}`, { state: object })}
+      to={`/house/${object.id}`}
+      className="link-card"
+    >
       <img src={cover} alt="" />
       <p>{title}</p>
-    </Link>
+    </div>
   );
 };

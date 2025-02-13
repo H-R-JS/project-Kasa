@@ -1,0 +1,26 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.img-carousel {
+  object-fit: cover;
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+}
+
+.arrow {
+  position: relative;
+  width: 47px;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 80px;
+}
+
+.arrow.right {
+  right: 80px;
+}

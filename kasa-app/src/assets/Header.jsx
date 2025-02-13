@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 export const Header = () => {
-  const [classActive, setClassActive] = useState({ home: "", about: "" });
+  const [classActive, setClassActive] = useState({
+    home: "none",
+    about: "none",
+  });
 
   const url = window.location.href;
 
@@ -13,6 +16,8 @@ export const Header = () => {
       return setClassActive({ home: "underligne", about: "none" });
     } else if (url.includes("about")) {
       return setClassActive({ home: "none", about: "underligne" });
+    } else {
+      return setClassActive({ home: "none", about: "none" });
     }
   }
 

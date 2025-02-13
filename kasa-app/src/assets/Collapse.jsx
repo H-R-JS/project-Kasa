@@ -18,7 +18,7 @@ export const Collapse = ({ title, text }) => {
         <h2>{title}</h2>
         <img
           onClick={toggleCollapse}
-          className="coll-arrow"
+          className={`coll-arrow ${displayText}`}
           src={arrow}
           alt="Icone flèche"
         />

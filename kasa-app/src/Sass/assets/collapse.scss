@@ -16,11 +16,40 @@
 .coll-arrow {
   width: 32px;
   height: 32px;
+  transition: 0.3s all;
+}
+
+.coll-arrow.none {
+  transform: rotate(0deg);
+}
+
+.coll-arrow.show {
+  transform: rotate(-180deg);
+}
+
+.coll-text-container {
+  overflow: hidden;
+  margin: 5px 20px;
+  margin-bottom: 30px;
+  transition: 0.5s all;
+  p {
+    transition: 0.5s all;
+  }
 }
 
 .coll-text-container.none {
-  display: none;
+  max-height: 0px;
+  opacity: 0;
+  p {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
 }
 
 .coll-text-container.show {
+  max-height: 500px;
+  p {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

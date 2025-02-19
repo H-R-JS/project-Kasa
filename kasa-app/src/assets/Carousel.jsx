@@ -24,7 +24,7 @@ export const Carousel = ({ pictures }) => {
   }
 
   return (
-    <article>
+    <article className="carousel-container">
       <div className="carousel">
         <img
           onClick={handlePictures}

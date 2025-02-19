@@ -4,7 +4,9 @@ export const Banner = ({ text, img }) => {
   return (
     <article className="banner">
       <img src={img} alt="Image d'arrière plan" />
-      <h1>{text}</h1>
+      <div className="banner-title-container">
+        <h1>{text}</h1>
+      </div>
     </article>
   );
 };

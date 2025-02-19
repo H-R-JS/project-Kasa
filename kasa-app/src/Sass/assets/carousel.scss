@@ -1,12 +1,19 @@
+.carousel-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .carousel {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .img-carousel {
   object-fit: cover;
-  width: 1240px;
+  width: 90%;
   height: 415px;
   border-radius: 25px;
 }
@@ -23,4 +30,18 @@
 
 .arrow.right {
   right: 80px;
+}
+
+@media (max-width: 875px) {
+  .arrow {
+    width: 24px;
+  }
+
+  .arrow.left {
+    left: 40px;
+  }
+
+  .arrow.right {
+    right: 40px;
+  }
 }

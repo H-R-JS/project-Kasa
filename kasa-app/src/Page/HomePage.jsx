@@ -8,11 +8,16 @@ export const HomePage = () => {
   const text = "Chez vous, partout et ailleurs";
   // get six data for home page
   let arrayData = [];
-  data.forEach((item, index) => {
-    if (index <= 5) {
-      arrayData.push(item);
-    }
-  });
+  handleData();
+
+  function handleData() {
+    data.forEach((item, index) => {
+      if (index <= 5) {
+        arrayData.push(item);
+      }
+    });
+  }
+
   return (
     <section className="page home">
       <Banner text={text} img={imgHome} />

@@ -4,6 +4,7 @@ import { Layout } from "./assets/Layout";
 import { AboutPage } from "./Page/AboutPage";
 import { HomePage } from "./Page/HomePage";
 import { HousePage } from "./Page/HousePage";
+import { ErrorPage } from "./Page/ErrorPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="home" element={<HomePage />} />
         <Route path="house/:id" element={<HousePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   );

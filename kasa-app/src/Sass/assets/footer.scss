@@ -3,7 +3,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 210px;
   background-color: #000;
 }
@@ -15,4 +15,11 @@ footer img {
 footer p {
   color: #fff;
   font-size: 24px;
+}
+
+@media (max-width: 775px) {
+  footer p {
+    font-size: 12px;
+    width: 100px;
+  }
 }

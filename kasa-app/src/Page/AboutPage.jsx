@@ -10,7 +10,14 @@ export const AboutPage = () => {
       <Banner img={imgAbout} />
       <div className="collapse-container">
         {textsAbout.map((item, index) => {
-          return <Collapse key={index} title={item.title} text={item.text} />;
+          return (
+            <Collapse
+              key={index}
+              classElement={"about"}
+              title={item.title}
+              text={item.text}
+            />
+          );
         })}
       </div>
     </section>

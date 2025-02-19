@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import iconLogo from "./icon/LOGO.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 export const Header = () => {
@@ -9,6 +9,7 @@ export const Header = () => {
     about: "none",
   });
 
+  const location = useLocation();
   const url = window.location.href;
 
   function handleUnderligne() {
@@ -23,21 +24,21 @@ export const Header = () => {
 
   useEffect(() => {
     handleUnderligne();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <header>
-      <img src={iconLogo} alt="L'icone du logo" />
+      <img className="header-logo" src={iconLogo} alt="L'icone du logo" />
       <nav>
         <ul>
           <li onClick={handleUnderligne}>
             <Link to="/home" className={`link ${classActive.home}`}>
-              Accueil
+              ACCUEIL
             </Link>
           </li>
           <li onClick={handleUnderligne}>
             <Link to="/about" className={`link ${classActive.about}`}>
-              A propos
+              A PROPOS
             </Link>
           </li>
         </ul>

@@ -7,11 +7,33 @@
 @import "./Sass/page/homePage.scss";
 @import "./Sass/page/aboutPage.scss";
 @import "./Sass/page/housePage.scss";
+@import "./Sass/page/errorPage.scss";
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
+  width: 100%;
   margin: 0;
   font-family: "Montserrat", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .page {

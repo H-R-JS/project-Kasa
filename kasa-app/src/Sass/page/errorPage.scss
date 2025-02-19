@@ -1,0 +1,35 @@
+.error h2 {
+  color: #ff6060;
+  font-size: 288px;
+  margin: 0;
+}
+
+.error p {
+  color: #ff6060;
+  font-size: 36px;
+  margin-top: 140px;
+  text-align: center;
+}
+
+.error-link-back {
+  font-size: 18px;
+  color: #000;
+  margin: 130px 0;
+}
+
+@media (max-width: 900px) {
+  .error h2 {
+    font-size: 96px;
+    margin-top: 20px;
+  }
+  .error p {
+    font-size: 18px;
+    margin-top: 130px;
+    padding: 0 50px;
+  }
+
+  .error-link-back {
+    font-size: 14px;
+    margin: 110px 0;
+  }
+}

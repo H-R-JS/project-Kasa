@@ -1,5 +1,9 @@
-.collapse {
-  width: 1023px;
+.collapse.about {
+  width: 80%;
+}
+
+.collapse.house {
+  width: 48%;
 }
 
 .coll-title-container {
@@ -48,8 +52,20 @@
 
 .coll-text-container.show {
   max-height: 500px;
+  padding-top: 20px;
   p {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+.coll-value-array {
+  margin: 0;
+}
+
+@media (max-width: 875px) {
+  .collapse.house {
+    width: 100%;
+    font-size: 13px;
   }
 }

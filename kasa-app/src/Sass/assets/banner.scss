@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1240px;
+  justify-content: center;
+  width: 97%;
+
   height: 223px;
+
   background-color: #000;
   border-radius: 27px;
 }
@@ -16,9 +19,16 @@
   opacity: 0.6;
 }
 
-.banner h1 {
+.banner-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 190px;
+  width: 90%;
+}
+
+.banner h1 {
   margin-left: 35px;
   color: #fff;
   font-weight: 700;
@@ -26,4 +36,26 @@
   font-family: "Montserrat", serif;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), -1px -1px 0 black,
     1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+@media (max-width: 875px) {
+  .banner {
+    height: 111px;
+    width: 90%;
+  }
+
+  .banner-title-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 130px;
+    width: 90%;
+    padding-right: 20px;
+    max-height: 77px;
+  }
+
+  .banner h1 {
+    top: 180px;
+    font-size: 24px;
+  }
 }

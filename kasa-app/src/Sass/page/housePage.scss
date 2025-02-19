@@ -1,0 +1,177 @@
+.house-info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.house-info.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.house-info.left h2 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #ff6060;
+}
+
+.house-info.left p {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: -28px;
+}
+
+.house-tag-container {
+  display: flex;
+}
+
+.house-tag {
+  background-color: #ff6060;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.house-info.right {
+  display: flex;
+  flex-direction: column;
+  color: #ff6060;
+}
+
+.house-profil {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.house-profil p {
+  font-size: 18px;
+  width: 90px;
+  text-align: right;
+}
+
+.house-profil img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  margin-left: 12px;
+}
+
+.house-star-container {
+  display: flex;
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+
+.house-star-rating {
+  width: 36px;
+}
+
+.house-collapse-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 25px 100px;
+}
+
+@media (max-width: 875px) {
+  .page.house {
+    width: 100%;
+  }
+
+  .house-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0px;
+  }
+
+  .house-info.left {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .house-info.left h2 {
+    font-weight: 500;
+    font-size: 36px;
+    padding: 0 15px;
+  }
+
+  .house-info.left p {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: -28px;
+    padding: 0 15px;
+  }
+
+  .house-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .house-tag {
+    font-weight: 700;
+    font-size: 10px;
+    padding: 5px 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .house-info.right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    height: 80px;
+  }
+
+  .house-profil {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .house-profil p {
+    font-size: 14px;
+    width: 90px;
+    text-align: right;
+  }
+
+  .house-profil img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    margin-left: 12px;
+  }
+
+  .house-star-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    height: 50px;
+  }
+
+  .house-star-rating {
+    width: 36px;
+    height: 36px;
+  }
+
+  .house-collapse-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 25px 0px;
+  }
+}

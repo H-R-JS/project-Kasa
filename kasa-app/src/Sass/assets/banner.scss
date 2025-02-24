@@ -1,12 +1,9 @@
+@use "../mixin.scss" as m;
+
 .banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include m.flex-colunm-jus;
   width: 97%;
-
   height: 223px;
-
   background-color: #000;
   border-radius: 27px;
 }
@@ -20,9 +17,7 @@
 }
 
 .banner-title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include m.flex-center;
   position: absolute;
   top: 190px;
   width: 90%;
@@ -33,7 +28,6 @@
   color: #fff;
   font-weight: 700;
   font-size: 48px;
-  font-family: "Montserrat", serif;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), -1px -1px 0 black,
     1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
@@ -45,11 +39,7 @@
   }
 
   .banner-title-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
     top: 130px;
-    width: 90%;
     padding-right: 20px;
     max-height: 77px;
   }

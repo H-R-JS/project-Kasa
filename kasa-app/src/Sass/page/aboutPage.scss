@@ -1,7 +1,7 @@
+@use "../mixin.scss" as m;
+
 .collapse-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include m.flex-colunm;
   width: 100%;
   max-width: 1240px;
   margin-top: 40px;

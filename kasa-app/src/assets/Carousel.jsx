@@ -5,6 +5,8 @@ import arrowRight from "./icon/arrow-right.png";
 export const Carousel = ({ pictures }) => {
   const [indexPicture, setIndexPicture] = useState(0);
 
+  console.log(pictures);
+
   function handlePictures(e) {
     const classArrow = e.target.classList[1];
     const picturesLength = pictures.length - 1;
@@ -35,7 +37,7 @@ export const Carousel = ({ pictures }) => {
         <img
           src={pictures[indexPicture]}
           className="img-carousel"
-          alt="Flèche de gauche"
+          alt="Image du logement"
         />
         <img
           onClick={handlePictures}

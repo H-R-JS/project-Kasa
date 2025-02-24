@@ -1,19 +1,23 @@
+@use "../mixin.scss" as m;
+
 .carousel-container {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include m.flex-center;
   width: 100%;
+  margin: 0;
 }
 
 .img-carousel {
+  display: block;
   object-fit: cover;
-  width: 90%;
+  aspect-ratio: 21 / 9;
+  margin: 0;
+  width: 100%;
+  max-width: none;
   height: 415px;
   border-radius: 25px;
 }
@@ -32,7 +36,23 @@
   right: 80px;
 }
 
+@media (max-width: 1350px) {
+  .img-carousel {
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    height: 415px;
+    border-radius: 25px;
+  }
+}
+
 @media (max-width: 875px) {
+  .carousel-container {
+    width: 100%;
+  }
+
   .arrow {
     width: 24px;
   }

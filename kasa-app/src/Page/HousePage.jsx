@@ -2,12 +2,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Carousel } from "../assets/Carousel";
 import { Collapse } from "../assets/Collapse";
-import starRating from "../assets/icon/star-rating.png";
-import starInactive from "../assets/icon/star-inactive.png";
+import { Stars } from "../assets/Stars";
 
 export const HousePage = () => {
   const object = useLocation().state;
 
+  console.log(object);
   let arrayRating = [];
   let arrayStars = [];
   handleRateAndStars();
@@ -44,29 +44,7 @@ export const HousePage = () => {
             <p>{object.host.name}</p>
             <img src={object.host.picture} alt="Photo de profil" />
           </div>
-          <div className="house-star-container">
-            {arrayStars.map((item) => {
-              if (arrayRating.includes(item)) {
-                return (
-                  <img
-                    className="house-star-rating"
-                    key={item}
-                    src={starRating}
-                    alt="étoile de notation coloré"
-                  />
-                );
-              } else {
-                return (
-                  <img
-                    className="house-star-rating"
-                    key={item}
-                    src={starInactive}
-                    alt="étoile de notation"
-                  />
-                );
-              }
-            })}
-          </div>
+          <Stars arrayStars={arrayStars} arrayRating={arrayRating} />
         </div>
       </article>
       <article className="house-collapse-container">

@@ -1,8 +1,7 @@
+@use "../mixin.scss" as m;
+
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include m.flex-colunm-jus;
   width: 100vw;
   height: 210px;
   background-color: #000;

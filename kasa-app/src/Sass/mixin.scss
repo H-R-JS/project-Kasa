@@ -1,17 +1,6 @@
-@mixin flex-colunm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@mixin flex-colunm-jus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@mixin display-flex($display, $direction, $align, $justify) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
 }

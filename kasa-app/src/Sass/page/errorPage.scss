@@ -1,11 +1,13 @@
+@use "../variables.scss" as v;
+
 .error h2 {
-  color: #ff6060;
+  color: v.$main-color;
   font-size: 288px;
   margin: 0;
 }
 
 .error p {
-  color: #ff6060;
+  color: v.$main-color;
   font-size: 36px;
   margin-top: 140px;
   text-align: center;
@@ -13,7 +15,7 @@
 
 .error-link-back {
   font-size: 18px;
-  color: #000;
+  color: v.$third-color;
   margin: 130px 0;
 }
 

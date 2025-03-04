@@ -1,7 +1,9 @@
+@use "../variables.scss" as v;
+
 .link-card {
   width: 340px;
   height: 340px;
-  color: #fff;
+  color: v.$second-color;
   font-weight: 700;
   margin: 0px 0;
   text-decoration: none;

@@ -1,6 +1,7 @@
 @use "../mixin.scss" as m;
+
 .cards-container {
-  @include m.flex-center;
+  @include m.display-flex(flex, row, center, center);
   flex-wrap: wrap;
   gap: 60px;
   width: 97%;

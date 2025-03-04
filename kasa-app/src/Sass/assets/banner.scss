@@ -1,10 +1,11 @@
 @use "../mixin.scss" as m;
+@use "../variables.scss" as v;
 
 .banner {
-  @include m.flex-colunm-jus;
+  @include m.display-flex(flex, column, center, none);
   width: 97%;
   height: 223px;
-  background-color: #000;
+  background-color: v.$third-color;
   border-radius: 27px;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .banner-title-container {
-  @include m.flex-center;
+  @include m.display-flex(flex, row, center, center);
   position: absolute;
   top: 190px;
   width: 90%;
@@ -25,7 +26,7 @@
 
 .banner h1 {
   margin-left: 35px;
-  color: #fff;
+  color: v.$second-color;
   font-weight: 700;
   font-size: 48px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), -1px -1px 0 black,
@@ -36,6 +37,10 @@
   .banner {
     height: 111px;
     width: 90%;
+    border-radius: 10px;
+  }
+
+  .banner img {
     border-radius: 10px;
   }
 

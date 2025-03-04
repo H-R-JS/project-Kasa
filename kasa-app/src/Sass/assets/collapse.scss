@@ -1,4 +1,5 @@
 @use "../variables.scss" as v;
+@use "../mixin.scss" as m;
 
 .collapse.about {
   width: 83%;
@@ -9,13 +10,11 @@
 }
 
 .coll-title-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include m.display-flex(flex, row, center, space-between);
   height: 54px;
   padding: 0 15px;
   background-color: v.$main-color;
-  color: #fff;
+  color: v.$second-color;
   border-radius: 5px;
 }
 

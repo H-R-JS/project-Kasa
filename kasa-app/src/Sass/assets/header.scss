@@ -1,7 +1,8 @@
+@use "../mixin.scss" as m;
+@use "../variables.scss" as v;
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include m.display-flex(flex, row, center, space-between);
   width: 100%;
   max-width: 1240px;
   margin: 45px 0;
@@ -13,8 +14,7 @@ header {
 }
 
 nav ul {
-  display: flex;
-  justify-content: space-between;
+  @include m.display-flex(flex, row, none, space-between);
   gap: 50px;
   margin-right: 20px;
 }
@@ -34,15 +34,12 @@ nav li {
 
 .link {
   text-decoration: none;
-  color: black;
+  color: v.$third-color;
   text-transform: capitalize;
 }
 
 @media (max-width: 875px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 20px 0px;
     width: 96%;
   }

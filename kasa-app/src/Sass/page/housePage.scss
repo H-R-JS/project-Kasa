@@ -1,22 +1,23 @@
+@use "../variables.scss" as v;
+@use "../mixin.scss" as m;
+
 .page.house {
   width: 100%;
 }
 
 .house-info-container {
-  display: flex;
-  justify-content: space-between;
+  @include m.display-flex(flex, row, none, space-between);
   width: 92%;
 }
 
 .house-info.left {
-  display: flex;
-  flex-direction: column;
+  @include m.display-flex(flex, column, none, none);
 }
 
 .house-info.left h2 {
   font-weight: 500;
   font-size: 36px;
-  color: #ff6060;
+  color: v.$main-color;
 }
 
 .house-info.left p {
@@ -30,8 +31,8 @@
 }
 
 .house-tag {
-  background-color: #ff6060;
-  color: #fff;
+  background-color: v.$main-color;
+  color: v.$second-color;
   font-weight: 700;
   padding: 5px 40px;
   margin-right: 10px;
@@ -39,14 +40,12 @@
 }
 
 .house-info.right {
-  display: flex;
-  flex-direction: column;
-  color: #ff6060;
+  @include m.display-flex(flex, column, none, none);
+  color: v.$main-color;
 }
 
 .house-profil {
-  display: flex;
-  align-items: center;
+  @include m.display-flex(flex, row, center, none);
   margin-top: 20px;
 }
 
@@ -76,15 +75,14 @@
 }
 
 .house-collapse-container {
-  display: flex;
-  justify-content: space-between;
+  @include m.display-flex(flex, row, none, space-between);
   width: 92%;
   margin: 25px 100px;
 }
 
 @media (max-width: 875px) {
   .house-info-container {
-    flex-direction: column;
+    @include m.display-flex(flex, column, none, space-between);
     width: 92%;
     padding: 0 0px;
   }
@@ -94,10 +92,14 @@
   }
 
   .house-info.left h2 {
+    font-size: 18px;
+
+    margin-bottom: 30px;
     padding: 0 15px;
   }
 
   .house-info.left p {
+    font-size: 14px;
     padding: 0 15px;
   }
 

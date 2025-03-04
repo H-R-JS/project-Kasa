@@ -1,13 +1,21 @@
 import React from "react";
-
 import starRating from "./icon/star-rating.png";
 import starInactive from "./icon/star-inactive.png";
 
-export const Stars = ({ arrayStars, arrayRating }) => {
+export const Stars = ({ rating }) => {
+  let arrayRating = [];
+  handleRateAndStars();
+
+  function handleRateAndStars() {
+    for (let i = 0; i < 5; i++) {
+      arrayRating.push(i);
+    }
+  }
+
   return (
     <div className="house-star-container">
-      {arrayStars.map((item) => {
-        if (arrayRating.includes(item)) {
+      {arrayRating.map((item) => {
+        if (item <= rating - 1) {
           return (
             <img
               className="house-star-rating"

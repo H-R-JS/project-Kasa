@@ -1,7 +1,7 @@
 @use "../variables.scss" as v;
 
 .collapse.about {
-  width: 80%;
+  width: 83%;
 }
 
 .collapse.house {
@@ -69,5 +69,9 @@
   .collapse.house {
     width: 100%;
     font-size: 13px;
+  }
+
+  .collapse.about {
+    width: 90%;
   }
 }

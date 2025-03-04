@@ -35,6 +35,7 @@ nav li {
 .link {
   text-decoration: none;
   color: black;
+  text-transform: capitalize;
 }
 
 @media (max-width: 875px) {
@@ -61,5 +62,9 @@ nav li {
     min-width: 70px;
     font-size: 12px;
     margin-left: 0px;
+  }
+
+  .link {
+    text-transform: uppercase;
   }
 }

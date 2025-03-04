@@ -33,12 +33,12 @@ export const Header = () => {
         <ul>
           <li onClick={handleUnderligne}>
             <Link to="/home" className={`link ${classActive.home}`}>
-              ACCUEIL
+              Accueil
             </Link>
           </li>
           <li onClick={handleUnderligne}>
             <Link to="/about" className={`link ${classActive.about}`}>
-              A PROPOS
+              A Propos
             </Link>
           </li>
         </ul>

@@ -11,12 +11,9 @@ export const AboutPage = () => {
       <div className="collapse-container">
         {textsAbout.map((item, index) => {
           return (
-            <Collapse
-              key={index}
-              classElement={"about"}
-              title={item.title}
-              text={item.text}
-            />
+            <Collapse key={index} classElement={"about"} title={item.title}>
+              {item.text}
+            </Collapse>
           );
         })}
       </div>

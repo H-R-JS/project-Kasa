@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import arrow from "./icon/arrow_back.png";
 
-export const Collapse = ({ title, text, array, classElement }) => {
+export const Collapse = ({ title, text, array, classElement, children }) => {
   const [displayText, setDisplayText] = useState("none");
   function toggleCollapse() {
     if (displayText == "none") {
@@ -22,19 +22,14 @@ export const Collapse = ({ title, text, array, classElement }) => {
           alt="Icone flèche"
         />
       </div>
-      <div className={`coll-text-container ${displayText}`}>
-        {array ? (
-          array.map((item, index) => {
+      <div className={`coll-text-container ${displayText}`}>{children}</div>
+    </article>
+  );
+};
+/**array.map((item, index) => {
             return (
               <p key={index} className="coll-value-array">
                 {item}
               </p>
             );
-          })
-        ) : (
-          <p className="coll-value-array">{text}</p>
-        )}
-      </div>
-    </article>
-  );
-};
+          }) */

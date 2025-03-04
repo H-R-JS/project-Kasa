@@ -6,6 +6,7 @@
 }
 
 .carousel {
+  position: relative;
   @include m.flex-center;
   width: 100%;
   margin: 0;
@@ -20,12 +21,15 @@
   max-width: none;
   height: 415px;
   border-radius: 25px;
+  z-index: 0;
 }
 
-.arrow {
+.arrow.show {
+  display: inline-block;
   position: relative;
   width: 47px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .arrow.left {
@@ -34,6 +38,18 @@
 
 .arrow.right {
   right: 80px;
+}
+
+.arrow.none {
+  display: none;
+}
+
+.carousel-index {
+  position: absolute;
+  top: 350px;
+  color: #fff;
+  font-size: 18px;
+  z-index: 2;
 }
 
 @media (max-width: 1350px) {
@@ -63,5 +79,9 @@
 
   .arrow.right {
     right: 40px;
+  }
+
+  .carousel-index {
+    display: none;
   }
 }

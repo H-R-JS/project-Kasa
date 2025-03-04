@@ -1,63 +1,47 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Navigate } from "react-router-dom";
 import { Carousel } from "../assets/Carousel";
 import { Collapse } from "../assets/Collapse";
 import { Stars } from "../assets/Stars";
+import { Tags } from "../assets/Tags";
+import data from "../../JSONFiles/data.json";
 
 export const HousePage = () => {
-  const object = useLocation().state;
-
-  console.log(object);
-  let arrayRating = [];
-  let arrayStars = [];
-  handleRateAndStars();
-
-  function handleRateAndStars() {
-    for (let i = 0; i < 5; i++) {
-      arrayStars.push(i);
-    }
-
-    for (let i = 0; i < object.rating; i++) {
-      arrayRating.push(i);
-    }
+  let appartement = data.filter((item) => item.id == useParams().id)[0];
+  if (appartement === undefined) {
+    return <Navigate to="*" replace />;
   }
 
   return (
     <section className="page house">
-      <Carousel pictures={object.pictures} />
+      <Carousel pictures={appartement.pictures} />
       <article className="house-info-container">
         <div className="house-info left">
-          <h2>{object.title}</h2>
-          <p>{object.location}</p>
-          <div className="house-tag-container">
-            {object.tags.map((item, index) => {
-              return (
-                <span key={index} className="house-tag">
-                  {item}
-                </span>
-              );
-            })}
-          </div>
+          <h2>{appartement.title}</h2>
+          <p>{appartement.location}</p>
+          <Tags tags={appartement.tags} />
         </div>
         <div className="house-info right">
           <div className="house-profil">
-            <p>{object.host.name}</p>
-            <img src={object.host.picture} alt="Photo de profil" />
+            <p>{appartement.host.name}</p>
+            <img src={appartement.host.picture} alt="Photo de profil" />
           </div>
-          <Stars arrayStars={arrayStars} arrayRating={arrayRating} />
+          <Stars rating={appartement.rating} />
         </div>
       </article>
       <article className="house-collapse-container">
-        <Collapse
-          classElement="house"
-          title="Description"
-          text={object.description}
-        />
-        <Collapse
-          classElement="house"
-          title="Équipements"
-          array={object.equipments}
-        />
+        <Collapse classElement="house" title="Description">
+          {appartement.description}
+        </Collapse>
+        <Collapse classElement="house" title="Équipements">
+          {appartement.equipments.map((item, index) => {
+            return (
+              <p key={index} className="coll-value-array">
+                {item}
+              </p>
+            );
+          })}
+        </Collapse>
       </article>
     </section>
   );

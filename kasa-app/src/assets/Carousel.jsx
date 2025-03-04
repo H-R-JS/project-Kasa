@@ -1,29 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import arrowLeft from "./icon/arrow-left.png";
 import arrowRight from "./icon/arrow-right.png";
 
 export const Carousel = ({ pictures }) => {
   const [indexPicture, setIndexPicture] = useState(0);
 
-  console.log(pictures);
+  const [displayArrows, setDisplayArrows] = useState("show");
+
+  const lengthPictures = pictures.length;
 
   function handlePictures(e) {
     const classArrow = e.target.classList[1];
-    const picturesLength = pictures.length - 1;
+    const picturesLength = lengthPictures - 1;
+
+    const resultLeft = indexPicture == 0 ? picturesLength : indexPicture - 1;
+    const resultRight = indexPicture == picturesLength ? 0 : indexPicture + 1;
+
     if (classArrow == "left") {
-      if (indexPicture == 0) {
-        setIndexPicture(picturesLength);
-      } else {
-        setIndexPicture(indexPicture - 1);
-      }
+      setIndexPicture(resultLeft);
     } else if (classArrow == "right") {
-      if (indexPicture == picturesLength) {
-        setIndexPicture(0);
-      } else {
-        setIndexPicture(indexPicture + 1);
-      }
+      setIndexPicture(resultRight);
     }
   }
+
+  useEffect(() => {
+    if (lengthPictures == 1) {
+      setDisplayArrows("none");
+    } else {
+      setDisplayArrows("show");
+    }
+  }, [lengthPictures]);
 
   return (
     <article className="carousel-container">
@@ -31,7 +37,7 @@ export const Carousel = ({ pictures }) => {
         <img
           onClick={handlePictures}
           src={arrowLeft}
-          className="arrow left"
+          className={`arrow left ${displayArrows}`}
           alt="Flèche de gauche"
         />
         <img
@@ -42,9 +48,12 @@ export const Carousel = ({ pictures }) => {
         <img
           onClick={handlePictures}
           src={arrowRight}
-          className="arrow right"
+          className={`arrow right ${displayArrows}`}
           alt="Flèche de droite"
         />
+        <span className="carousel-index">{`${
+          indexPicture + 1
+        }/${lengthPictures}`}</span>
       </div>
     </article>
   );

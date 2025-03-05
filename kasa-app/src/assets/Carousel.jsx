@@ -51,7 +51,7 @@ export const Carousel = ({ pictures }) => {
           className={`arrow right ${displayArrows}`}
           alt="Flèche de droite"
         />
-        <span className="carousel-index">{`${
+        <span className={`carousel-index ${displayArrows}`}>{`${
           indexPicture + 1
         }/${lengthPictures}`}</span>
       </div>

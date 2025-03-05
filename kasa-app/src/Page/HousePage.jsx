@@ -7,11 +7,11 @@ import { Tags } from "../assets/Tags";
 import data from "../../JSONFiles/data.json";
 
 export const HousePage = () => {
-  let appartement = data.filter((item) => item.id == useParams().id)[0];
-  if (appartement === undefined) {
+  let appartements = data.filter((item) => item.id == useParams().id);
+  if (appartements.length === 0) {
     return <Navigate to="*" replace />;
   }
-
+  let appartement = appartements[0];
   return (
     <section className="page house">
       <Carousel pictures={appartement.pictures} />
@@ -31,7 +31,7 @@ export const HousePage = () => {
       </article>
       <article className="house-collapse-container">
         <Collapse classElement="house" title="Description">
-          {appartement.description}
+          <p className="coll-value-text">{appartement.description}</p>
         </Collapse>
         <Collapse classElement="house" title="Équipements">
           {appartement.equipments.map((item, index) => {

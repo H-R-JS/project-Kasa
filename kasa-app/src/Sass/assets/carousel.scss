@@ -1,5 +1,10 @@
 @use "../mixin.scss" as m;
 @use "../variables.scss" as v;
+.carousel {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 .carousel-container {
   width: 100%;
@@ -19,7 +24,6 @@
   aspect-ratio: 21 / 9;
   margin: 0;
   width: 100%;
-  max-width: none;
   height: 415px;
   border-radius: 25px;
   z-index: 0;
@@ -42,7 +46,8 @@
 }
 
 .arrow.none {
-  display: none;
+  opacity: none;
+  pointer-events: none;
 }
 
 .carousel-index {
@@ -53,13 +58,16 @@
   z-index: 2;
 }
 
+.carousel-index.none {
+  display: none;
+}
+
 @media (max-width: 1350px) {
   .img-carousel {
     display: block;
     object-fit: cover;
     margin: 0;
-    width: 100%;
-    min-width: 0;
+    min-width: 90%;
     height: 415px;
     border-radius: 25px;
   }
@@ -75,6 +83,12 @@
 
   .arrow.show {
     width: 24px;
+  }
+
+  .arrow.none {
+    opacity: none;
+    width: 18px;
+    pointer-events: none;
   }
 
   .arrow.left {

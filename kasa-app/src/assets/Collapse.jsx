@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import arrow from "./icon/arrow_back.png";
 
-export const Collapse = ({ title, text, array, classElement, children }) => {
+export const Collapse = ({ title, classElement, children }) => {
   const [displayText, setDisplayText] = useState("none");
   function toggleCollapse() {
     if (displayText == "none") {

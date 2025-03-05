@@ -5,6 +5,18 @@
   width: 83%;
 }
 
+.collapse.about {
+  .coll-text-container {
+    overflow: hidden;
+    margin: 5px 20px;
+    margin-bottom: 30px;
+    transition: 0.5s all;
+    p {
+      transition: 0.5s all;
+    }
+  }
+}
+
 .collapse.house {
   width: 48%;
 }
@@ -34,7 +46,7 @@
 
 .coll-text-container {
   overflow: hidden;
-  margin: 5px 20px;
+  margin: 22px 20px;
   margin-bottom: 30px;
   transition: 0.5s all;
   p {
@@ -53,15 +65,19 @@
 
 .coll-text-container.show {
   max-height: 500px;
-  padding-top: 20px;
   p {
     transform: translateY(0px);
     opacity: 1;
   }
 }
 
+.coll-value-text {
+  margin: 0;
+}
+
 .coll-value-array {
   margin: 0;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 875px) {

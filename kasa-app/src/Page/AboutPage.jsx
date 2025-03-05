@@ -12,7 +12,7 @@ export const AboutPage = () => {
         {textsAbout.map((item, index) => {
           return (
             <Collapse key={index} classElement={"about"} title={item.title}>
-              {item.text}
+              <p>{item.text}</p>
             </Collapse>
           );
         })}

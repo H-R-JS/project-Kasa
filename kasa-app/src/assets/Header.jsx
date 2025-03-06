@@ -10,10 +10,10 @@ export const Header = () => {
   });
 
   const location = useLocation();
-  const url = window.location.href;
+  const url = location.pathname;
 
   function handleUnderligne() {
-    if (url.includes("home")) {
+    if (url === "/") {
       return setClassActive({ home: "underligne", about: "none" });
     } else if (url.includes("about")) {
       return setClassActive({ home: "none", about: "underligne" });
@@ -32,7 +32,7 @@ export const Header = () => {
       <nav>
         <ul>
           <li onClick={handleUnderligne}>
-            <Link to="/home" className={`link ${classActive.home}`}>
+            <Link to="/" className={`link ${classActive.home}`}>
               Accueil
             </Link>
           </li>

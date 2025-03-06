@@ -6,7 +6,7 @@ export const ErrorPage = () => {
     <section className="page error">
       <h2>404</h2>
       <p>Oups! La page que vous demandez n'existe pas.</p>
-      <Link to="/home" className="error-link-back">
+      <Link to="/" className="error-link-back">
         Retourner sur la page d'accueil
       </Link>
     </section>

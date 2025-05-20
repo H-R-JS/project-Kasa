@@ -26,10 +26,3 @@ export const Collapse = ({ title, classElement, children }) => {
     </article>
   );
 };
-/**array.map((item, index) => {
-            return (
-              <p key={index} className="coll-value-array">
-                {item}
-              </p>
-            );
-          }) */

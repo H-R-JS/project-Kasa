@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { Carousel } from "../assets/Carousel";
 import { Collapse } from "../assets/Collapse";
@@ -8,10 +8,13 @@ import data from "../../JSONFiles/data.json";
 
 export const HousePage = () => {
   let appartements = data.filter((item) => item.id == useParams().id);
+
   if (appartements.length === 0) {
     return <Navigate to="*" replace />;
   }
+
   let appartement = appartements[0];
+
   return (
     <section className="page house">
       <Carousel pictures={appartement.pictures} />
